@@ -19,11 +19,6 @@ git clone https://github.com/MikeSherrill/tweetcapture.git
 ```sh
 gcloud config set project neu-ncaa
 ```
-### Copy the service account key from gs://
-
-```sh
-gsutil cp gs://ncaa-tweet-sentiment/neu-ncaa-serviceaccount-key.json /$HOME/
-```
 
 ## Changing topics
 The topics that are being captured are found in the file neu-ncaa/tweetcapture/pubsub/tweet-capture-docker-image/twitter-to-pubsub.py   
