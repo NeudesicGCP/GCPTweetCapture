@@ -4,6 +4,7 @@
 #SETUP
 
 #Set project
+
 gcloud config set project neu-ncaa-demo
 
 #Kubernetes cluster create (cloud shell)
