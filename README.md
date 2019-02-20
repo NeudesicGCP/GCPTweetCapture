@@ -89,7 +89,7 @@ pip install google-cloud-bigquery
 ### (from /neu-ncaa/tweetcapture/sentiment folder)
 ### run during and after the tweet capture
 ```sh
-python bigquery-sentiment-analysis-naturallanguage.py /$HOME/neu-ncaa-serviceaccount-key.json ncaa_tweets
+python bigquery-sentiment-analysis-naturallanguage.py ncaa_tweets
 ```
 
 ###################################################################################
