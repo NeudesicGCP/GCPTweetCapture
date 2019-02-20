@@ -29,8 +29,8 @@ gcloud builds submit --tag gcr.io/neu-ncaa-demo/tweetcapture-image .
 
 
 ##########################
-# Sentiment Analysis using Google Natural Language API
-#(must be run from a virtual environment)
+# Sentiment Analysis using Google Natural Language API 
+#(must be run from a virtual environment using CloudShell)
 
 pip install virtualenv
 
@@ -41,7 +41,8 @@ source twitter/bin/activate
 twitter/bin/pip install google-cloud-language
 pip install google-cloud-bigquery
 
-# From the Sentiment directory in cloud shell:
+# Process Tweet Sentiment 
+#(from /neu-ncaa/tweetcapture/sentiment folder)
 
 python bigquery-sentiment-analysis-naturallanguage.py neu-ncaa-serviceaccount-key.json ncaa_tweets
 
