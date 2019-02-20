@@ -19,7 +19,7 @@ gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a
 kubectl create -f twitter-stream.yaml
 kubectl create -f bigquery-controller.yaml
 
-# check the pods
+# Check the pods
 kubectl get pods
 
 # Create the docker image using cloud build - (if topics are changed)
@@ -27,6 +27,8 @@ kubectl get pods
 gcloud builds submit --tag gcr.io/neu-ncaa-demo/tweetcapture-image .
 
 
+
+##########################
 # Sentiment Analysis using Google Natural Language API
 #(must be run from a virtual environment)
 
