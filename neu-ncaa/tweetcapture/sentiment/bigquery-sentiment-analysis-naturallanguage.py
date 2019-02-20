@@ -11,11 +11,9 @@ from google.cloud.language import enums
 from google.cloud.language import types 
 
 
-def main(credential_file, dataset):
+def main(dataset):
     # Auth stuff setup
     # -----------------
-
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_file
 
     # Instantiates a client
     language_service = language.LanguageServiceClient()
@@ -24,9 +22,9 @@ def main(credential_file, dataset):
     # Fetch tweet text from BigQuery dataset
     # -------------------------------------------------
 
-#    QUERY = ('SELECT id as id_str, text FROM `neu-ncaa-demo.ncaa_tweets.tweets` '     -- use this query to initially to create the tweetsentiment table in BigQuery
+#    QUERY = ('SELECT id as id_str, text FROM `neu-ncaa.ncaa_tweets.tweets` '     -- use this query to initially to create the tweetsentiment table in BigQuery
 
-    QUERY = ('SELECT id as id_str, text FROM `neu-ncaa-demo.ncaa_tweets.TweetTopicAndSentiment` '
+    QUERY = ('SELECT id as id_str, text FROM `neu-ncaa.ncaa_tweets.TweetTopicAndSentiment` '
              'WHERE score is null '
              'limit 1000000')
     query_job = bigquery_service.query(QUERY,location='US')
