@@ -11,7 +11,7 @@ This demo uses the following components of GCP:
 If you haven't already, clone the Github repository for this demo:
 
 ```sh
-git clone https://github.com/MikeSherrill/tweetcapture.git
+git clone https://github.com/NeudesicGCP/GCPTweetCapture.git
 ```
 
 ### Set project
