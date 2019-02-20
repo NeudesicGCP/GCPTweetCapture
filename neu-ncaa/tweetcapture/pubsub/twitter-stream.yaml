@@ -13,13 +13,13 @@ spec:
     spec:
       containers:
       - name: twitter-to-pubsub
-        image: gcr.io/neu-ncaa-demo/tweetcapture-image:latest
+        image: gcr.io/neu-ncaa/tweetcapture-image:latest
         env:
         - name: PROCESSINGSCRIPT
           value: twitter-to-pubsub
         # Change this to your pubsub topic
         - name: PUBSUB_TOPIC
-          value: projects/neu-ncaa-demo/topics/ncaa_tweets
+          value: projects/neu-ncaa/topics/ncaa_tweets
         # Change the following four settings to your twitter credentials
         # information.
         - name: CONSUMERKEY
