@@ -13,16 +13,16 @@ spec:
     spec:
       containers:
       - name: bigquery
-        image: gcr.io/neu-ncaa-demo/tweetcapture-image:latest
+        image: gcr.io/neu-ncaa/tweetcapture-image:latest
         env:
         - name: PROCESSINGSCRIPT
           value: pubsub-to-bigquery
         # Change this to your pubsub topic
         - name: PUBSUB_TOPIC
-          value: projects/neu-ncaa-demo/topics/ncaa_tweets
+          value: projects/neu-ncaa/topics/ncaa_tweets
         # Change this to your project ID.
         - name: PROJECT_ID
-          value: neu-ncaa-demo
+          value: neu-ncaa
         # Change the following two settings to your dataset and table.
         - name: BQ_DATASET
           value: ncaa_tweets
