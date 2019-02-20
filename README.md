@@ -19,6 +19,11 @@ git clone https://github.com/MikeSherrill/tweetcapture.git
 ```sh
 gcloud config set project neu-ncaa
 ```
+### Copy the service account key from gs://
+
+```sh
+gsutil cp gs://ncaa-tweet-sentiment/neu-ncaa-serviceaccount-key.json /$HOME/
+```
 
 ## Changing topics
 The topics that are being captured are found in the file neu-ncaa/tweetcapture/pubsub/tweet-capture-docker-image/twitter-to-pubsub.py   
@@ -89,7 +94,7 @@ pip install google-cloud-bigquery
 ### (from /neu-ncaa/tweetcapture/sentiment folder)
 ### run during and after the tweet capture
 ```sh
-python bigquery-sentiment-analysis-naturallanguage.py neu-ncaa-serviceaccount-key.json ncaa_tweets
+python bigquery-sentiment-analysis-naturallanguage.py /$HOME/neu-ncaa-serviceaccount-key.json ncaa_tweets
 ```
 
 ###################################################################################
