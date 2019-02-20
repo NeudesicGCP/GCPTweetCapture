@@ -2,7 +2,7 @@
 # GCP tweet capture and sentiment analysis
 
 This demo uses the following components of GCP:
-  kubernetes, docker, pubsub, Natural Language (sentiment analysis), and BigQuery
+  kubernetes, docker, pubsub, Natural Language (sentiment analysis), BigQuery, and Data Studio
 
 # Setup
 
