@@ -17,7 +17,7 @@ git clone https://github.com/MikeSherrill/tweetcapture.git
 ### Set project
 
 ```sh
-gcloud config set project neu-ncaa-demo
+gcloud config set project neu-ncaa
 ```
 
 ## Changing topics
@@ -28,20 +28,20 @@ nano twitter-to-pubsub.py
 ```
 
 ### Create the docker image using cloud build - (if topics are changed)
-(from /neu-ncaa/tweetcapture/pubsub/tweetcapture-docker-image folder)
+(from /neu/tweetcapture/pubsub/tweetcapture-docker-image folder)
 
 ```sh
-gcloud builds submit --tag gcr.io/neu-ncaa-demo/tweetcapture-image .
+gcloud builds submit --tag gcr.io/neu-ncaa/tweetcapture-image .
 ```
 
 ## Capturing tweets
 ### Kubernetes cluster create (cloud shell)
 
 ```sh
-gcloud beta container --project "neu-ncaa-demo" clusters create "ncaatweet-cluster" --zone "us-central1-a" --service-account "neu-ncaa-tweet-serviceaccount@neu-ncaa-demo.iam.gserviceaccount.com"
+gcloud beta container --project "neu-ncaa" clusters create "ncaatweet-cluster" --zone "us-central1-a" --service-account "neu-ncaa-tweet-serviceaccount@neu-ncaa.iam.gserviceaccount.com"
 ```
 ```sh
-gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a --project neu-ncaa-demo
+gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a --project neu-ncaa
 ```
 
 ### Create the pods
@@ -105,5 +105,5 @@ https://datastudio.google.com/open/1m4S2Hqn1BCi7ql_2sfCEzz6H7x0oiAEY
 
 ## Delete kubernetes cluster
 ```sh
-gcloud beta container --project "neu-ncaa-demo" clusters delete "ncaatweet-cluster" --zone "us-central1-a"
+gcloud beta container --project "neu-ncaa" clusters delete "ncaatweet-cluster" --zone "us-central1-a"
 ```
