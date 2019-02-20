@@ -101,7 +101,6 @@ def main(dataset):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('credential_file', help='Path to your service account key (JSON file)')
     parser.add_argument('dataset', help='The dataset where the sentiment results should be uploaded to as a BQ table')
     args = parser.parse_args()
-    main(credential_file=args.credential_file, dataset=args.dataset)
+    main(dataset=args.dataset)
