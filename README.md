@@ -14,7 +14,7 @@ gcloud beta container --project "neu-ncaa-demo" clusters create "ncaatweet-clust
 gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a --project neu-ncaa-demo
 
 # Create the pods
-#(from /neu-ncaa/tweetcapture/pubsub folder)
+# (from /neu-ncaa/tweetcapture/pubsub folder)
 
 kubectl create -f twitter-stream.yaml
 kubectl create -f bigquery-controller.yaml
@@ -30,7 +30,7 @@ gcloud builds submit --tag gcr.io/neu-ncaa-demo/tweetcapture-image .
 
 ##########################
 # Sentiment Analysis using Google Natural Language API 
-#(must be run from a virtual environment using CloudShell)
+# (must be run from a virtual environment using CloudShell)
 
 pip install virtualenv
 
@@ -42,7 +42,7 @@ twitter/bin/pip install google-cloud-language
 pip install google-cloud-bigquery
 
 # Process Tweet Sentiment 
-#(from /neu-ncaa/tweetcapture/sentiment folder)
+# (from /neu-ncaa/tweetcapture/sentiment folder)
 
 python bigquery-sentiment-analysis-naturallanguage.py neu-ncaa-serviceaccount-key.json ncaa_tweets
 
