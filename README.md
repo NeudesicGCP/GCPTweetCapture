@@ -11,7 +11,7 @@ This demo uses the following components of GCP:
 If you haven't already, clone the Github repository for this demo:
 
 ```sh
-git clone https://github.com/MikeSherrill/tweetcapture.git
+git clone https://github.com/NeudesicGCP/GCPTweetCapture.git
 ```
 
 ### Set project
@@ -89,7 +89,7 @@ pip install google-cloud-bigquery
 ### (from /neu-ncaa/tweetcapture/sentiment folder)
 ### run during and after the tweet capture
 ```sh
-python bigquery-sentiment-analysis-naturallanguage.py neu-ncaa-serviceaccount-key.json ncaa_tweets
+python bigquery-sentiment-analysis-naturallanguage.py ncaa_tweets
 ```
 
 ###################################################################################
