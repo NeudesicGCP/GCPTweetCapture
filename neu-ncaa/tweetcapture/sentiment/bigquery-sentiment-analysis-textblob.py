@@ -9,11 +9,9 @@ from google.cloud.exceptions import NotFound
 from textblob import TextBlob
 
 
-def main(credential_file, dataset):
+def main(dataset):
     # Auth stuff setup
     # -----------------
-
-    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credential_file
 
     # Instantiates a client
     bigquery_service = bigquery.Client()
@@ -21,7 +19,8 @@ def main(credential_file, dataset):
     # Fetch tweet text from BigQuery dataset
     # -------------------------------------------------
 
-    QUERY = ('SELECT id_str, text FROM `mike-sherrill.NCAATweets.tweets`'
+    QUERY = ('SELECT id as id_str, text FROM `neu-ncaa.ncaa_tweets.TweetTopicAndSentiment` '
+             'WHERE score is null '
              'limit 1000000')
     query_job = bigquery_service.query(QUERY,location='US')
 #    for row in query_job: 
@@ -36,7 +35,7 @@ def main(credential_file, dataset):
 
     # Create the dataset & table
     # --------------------------
-    dataset_id = 'NCAATweets'
+    dataset_id = 'ncaa_tweets'
 
     dataset_ref = bigquery_service.dataset(dataset_id) 
 
@@ -85,6 +84,13 @@ def main(credential_file, dataset):
 
             # Write the results
             writer.writerow((row.id_str, analysis.sentiment.polarity, analysis.sentiment.subjectivity, sentiment))
+
+            # Write the results to BigQuery
+            row_to_insert = [(row.id_str,analysis.sentiment.polarity, analysis.sentiment.subjectivity, sentiment)]
+
+            errors = bigquery_service.insert_rows(table, row_to_insert)  # API request
+            assert errors == []
+
         except Exception as e:
             print(e)
 
@@ -101,7 +107,6 @@ def main(credential_file, dataset):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('credential_file', help='Path to your service account key (JSON file)')
     parser.add_argument('dataset', help='The dataset where the sentiment results should be uploaded to as a BQ table')
     args = parser.parse_args()
-    main(credential_file=args.credential_file, dataset=args.dataset)
+    main(dataset=args.dataset)
