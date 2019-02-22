@@ -2,8 +2,5 @@ gcloud beta container --project "neu-ncaa" clusters create "ncaatweet-cluster" -
 
 gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a --project neu-ncaa
 
-kubectl create -f GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/twitter-stream.yaml
-
-kubectl create -f GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/bigquery-controller.yaml
-
-sudo google_metadata_script_runner --script-type startup --debug
+sudo kubectl create -f GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/twitter-stream.yaml
+sudo kubectl create -f GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/bigquery-controller.yaml
