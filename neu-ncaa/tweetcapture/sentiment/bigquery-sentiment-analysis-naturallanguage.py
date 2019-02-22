@@ -70,7 +70,7 @@ def main(dataset):
 
     records_processed = 0
     for row in query_job:
-        time.sleep(0.1000)
+        time.sleep(0.07000)
         id_str, text = row[0], row[1]
         records_processed += 1
         
