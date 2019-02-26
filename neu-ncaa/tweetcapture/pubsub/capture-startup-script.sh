@@ -1,5 +1,5 @@
 
-gcloud beta container --project "neu-ncaa" clusters create "ncaatweet-cluster" --zone "us-central1-a" --enable-basic-auth --issue-client-certificate --service-account "neu-ncaa-tweet-serviceaccount@neu-ncaa.iam.gserviceaccount.com"
+gcloud beta container --project "neu-ncaa" clusters create "ncaatweet-cluster" --zone "us-central1-a" --service-account "neu-ncaa-tweet-serviceaccount@neu-ncaa.iam.gserviceaccount.com"
 
 gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a --project neu-ncaa
 
