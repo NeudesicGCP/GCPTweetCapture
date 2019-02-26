@@ -1,5 +1,4 @@
-gcloud config set project neu-ncaa
-gcloud config set compute/zone us-central1-a
+gcloud beta container --project "neu-ncaa" clusters create "ncaatweet-cluster" --zone "us-central1-a" --service-account "neu-ncaa-tweet-serviceaccount@neu-ncaa.iam.gserviceaccount.com"
 
 kubectl config view
 
