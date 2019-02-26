@@ -1,4 +1,3 @@
-sudo snap install kubectl
 
 gcloud beta container --project "neu-ncaa" clusters create "ncaatweet-cluster" --zone "us-central1-a" --enable-basic-auth --issue-client-certificate --service-account "neu-ncaa-tweet-serviceaccount@neu-ncaa.iam.gserviceaccount.com"
 
