@@ -10,9 +10,5 @@ gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a
 
 ls
 
-sudo cd GCPTweetCapture
-
-ls
-
-kubectl create -f twitter-stream.yaml
-kubectl create -f bigquery-controller.yaml
+sudo kubectl create -f GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/twitter-stream.yaml
+sudo kubectl create -f GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/bigquery-controller.yaml
