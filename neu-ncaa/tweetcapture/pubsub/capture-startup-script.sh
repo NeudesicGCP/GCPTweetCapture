@@ -10,7 +10,7 @@ gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a
 
 ls
 
-cd GCPTweetCapture
+sudo cd GCPTweetCapture
 
 ls
 
