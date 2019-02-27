@@ -16,5 +16,9 @@ cd $HOME
 
 ls
 
+cd GCPTweetCapture/neu-ncaa/tweetcapture/pubsub
+
+ls
+
 kubectl create -f $HOME/GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/twitter-stream.yaml
 kubectl create -f $HOME/GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/bigquery-controller.yaml
