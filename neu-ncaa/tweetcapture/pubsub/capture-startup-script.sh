@@ -12,5 +12,9 @@ kubectl config view
 
 ls
 
+cd $HOME
+
+ls
+
 kubectl create -f $HOME/GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/twitter-stream.yaml
-kubectl create -f $HOMEGCPTweetCapture/neu-ncaa/tweetcapture/pubsub/bigquery-controller.yaml
+kubectl create -f $HOME/GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/bigquery-controller.yaml
