@@ -8,17 +8,11 @@ kubectl config view
 
 gcloud container clusters get-credentials ncaatweet-cluster --zone us-central1-a --project neu-ncaa
 
-kubectl config view
-
-ls
-
-cd $HOME
-
 ls
 
 cd GCPTweetCapture/neu-ncaa/tweetcapture/pubsub
 
 ls
 
-kubectl create -f $HOME/GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/twitter-stream.yaml
-kubectl create -f $HOME/GCPTweetCapture/neu-ncaa/tweetcapture/pubsub/bigquery-controller.yaml
+kubectl create -f twitter-stream.yaml
+kubectl create -f bigquery-controller.yaml
