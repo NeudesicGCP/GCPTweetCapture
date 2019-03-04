@@ -103,8 +103,6 @@ if __name__ == '__main__':
     else:
         stream.filter(
                 track=[
-'UNC',
-'Tar Heels',
 'Duke',
 'Blue Devels',
 'Virginia',
@@ -118,7 +116,7 @@ if __name__ == '__main__':
 'Wolverines',
 'North Carolina',
 'Tar Heels',
-'Michigan State',
+'Michigan St',
 'Spartans',
 'Wisconsin',
 'Badgers',
@@ -137,7 +135,7 @@ if __name__ == '__main__':
 'Boilermakers',
 'Louisville',
 'Cardinals',
-'Iowa State',
+'Iowa St',
 'Cyclones',
 'Texas Tech',
 'Red Raiders',
