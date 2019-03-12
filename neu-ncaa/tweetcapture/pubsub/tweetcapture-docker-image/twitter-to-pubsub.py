@@ -110,11 +110,14 @@ if __name__ == '__main__':
 'Gonzaga',
 'Zags',
 'Kentucky',
+'Wildcats',
 'Nevada',
 'Wolf Pack',
 'Michigan',
+'MI State',  
 'Wolverines',
 'North Carolina',
+'UNC',
 'Tar Heels',
 'Michigan St',
 'Spartans',
@@ -140,6 +143,10 @@ if __name__ == '__main__':
 'Texas Tech',
 'Red Raiders',
 'LSU',
-'Tigers'
+'Tigers',
+'Florida State',
+'Seminoles',
+'Buffalo',
+'Bulls'
 ]
                 )
