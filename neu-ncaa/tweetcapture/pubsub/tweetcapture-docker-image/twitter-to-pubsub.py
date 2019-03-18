@@ -103,7 +103,7 @@ if __name__ == '__main__':
     else:
         stream.filter(
                 track=[
-    'Prairie View',
+     'Prairie View',
     'Belmont',
     'Bruins',
     'Farleigh Dickinson',
@@ -167,9 +167,7 @@ if __name__ == '__main__':
     'Tigers',
     'Seminoles',
     'Bulls'
-    'Alabama',
     'Arizona',
-    'Arkansas',
     'Auburn',
     'Baylor',
     'Bears',
